@@ -147,3 +147,7 @@ $excel.Quit()
 # 显示窗口
 $form.ShowDialog() | Out-Null
 
+# 无限循环，保持窗口打开状态
+while ($form.Visible) {
+    Start-Sleep -Milliseconds 100
+}
